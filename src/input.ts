@@ -13,15 +13,15 @@ export const program: IReactProgram = {
     "@ant-design/pro-components": ["ProTable"],
   },
   return: {
-    name: "Layout",
+    tag: "Layout",
     $$type: ComponentType.Layout,
     props: {
       className: { staticValue: "container" },
-      count: { dynamicValue: "num" },
+      count: { dynamicValue: "count" },
     },
     children: [
       {
-        name: "ProTable",
+        tag: "ProTable",
         $$type: ComponentType.Atomic,
         props: {
           columns: {

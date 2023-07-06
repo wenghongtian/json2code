@@ -24,14 +24,13 @@ export interface IReactProgram {
   name: string;
   states?: Record<string, IState>;
   props?: Record<string, IProgramProp>;
-  imports: Record<string, string[]>;
+  imports?: Record<string, string[]>;
   return: IReactComponent;
 }
 
 export interface IReactComponent {
-  name: string;
+  tag: string;
   $$type: ComponentType;
   props?: Record<string, IComponentProp>;
-  from?: string;
   children?: IReactComponent[];
 }

@@ -1,5 +1,8 @@
 export default class Value {
-  constructor(private val: any) {}
+  val: any;
+  constructor(val: any) {
+    this.val = val;
+  }
   toString() {
     switch (typeof this.val) {
       case "string":
@@ -25,6 +28,10 @@ export default class Value {
       case "function":
         return this.val.toString();
     }
+  }
+
+  static raw<T>(val: T) {
+    return val as Value;
   }
 
   private parseArr() {
